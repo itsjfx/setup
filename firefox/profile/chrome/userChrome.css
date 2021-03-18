@@ -1,0 +1,28 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Based from https://gist.github.com/Zren/37bed9ed257347d97233273f32287707 */
+
+/*
+* In order for userChrome.css to work, you need to open `about:config` and change
+* `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
+*/
+
+/* Hide ContextMenu Items */
+/* https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/ */
+/* https://searchfox.org/mozilla-release/source/browser/base/content/browser-context.inc */
+#contentAreaContextMenu #context-bookmarklink,
+#contentAreaContextMenu #context-selectall,
+#contentAreaContextMenu #context-sendlinktodevice,
+#contentAreaContextMenu #context-sendpagetodevice, 
+#contentAreaContextMenu #context-sep-sendlinktodevice,
+#contentAreaContextMenu #context-sep-sendpagetodevice,
+#contentAreaContextMenu #context-sendimage,
+#contentAreaContextMenu #context-setDesktopBackground,
+#contentAreaContextMenu #context-inspect-a11y,
+#contentAreaContextMenu #context-viewpartialsource-selection {
+	display: none !important;
+}
+
+/* Remove left tabbar padding when not maximized. */
+/*.titlebar-placeholder[type="pre-tabs"] { display: none; } *//* Firefox 64 */
+.titlebar-spacer[type="pre-tabs"] { width: 0 !important; } /* Firefox 65+ */
