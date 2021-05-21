@@ -1,5 +1,6 @@
 // me
 // some from: https://zren.github.io/kde/#firefox
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.urlbar.oneOffSearches", false); // deprecated, keeping in case it comes back
 user_pref("browser.ctrlTab.recentlyUsedOrder", false); // makes ctrl tab cool
 user_pref("browser.download.autohideButton", false); // keeps download button there
