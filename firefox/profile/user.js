@@ -7,6 +7,7 @@ user_pref("browser.download.autohideButton", false); // keeps download button th
 user_pref("devtools.netmonitor.persistlog", true);
 user_pref("devtools.webconsole.persistlog", true);
 user_pref("general.autoScroll", true); // false by default on Linux
+user_pref("full-screen-api.warning.timeout", 0);
 //user_pref("layers.acceleration.force-enabled", true); // hardware accel
 //user_pref("network.dns.disableIPv6", true); // depending on network
 
