@@ -29,23 +29,29 @@
 
 /* Add numbers to tabs */
 #tabbrowser-tabs{
-	counter-reset: n_tabs;
+	counter-reset: tab_count;
 }
 .tabbrowser-tab .tab-content{padding-left: 2px;}
 .tabbrowser-tab .tab-content::before{
 	display: -moz-box;
-	padding-left: 5px; /* box */
-	padding-right: 5px; /* box */
+	padding-left: 3px; /* box */
+	padding-right: 3px; /* box */
 
-	margin-bottom: 10px; /* hit top */
+	margin-bottom: 16px; /* hit top */
 	margin-left: -8px; /* hit left */
-	margin-right: 5px; /* give favico space */
+	margin-right: 2px; /* give favico space */
 
-	counter-increment: n_tabs;
-	content: counter(n_tabs);
+	counter-increment: tab_count;
+	content: counter(tab_count);
 	
 	font-weight: bold;
-	color: blue;
+	color: black;
 	background-color: orange;
-	font-size: 16px;
+	font-size: 15px;
+}
+
+/* Make selected tabs blue because the default sucks */
+.tab-background[selected="true"] {
+	background-color: blue !important;
+	background-image: none !important;
 }
